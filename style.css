@@ -1,0 +1,130 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ff758c, #ff7eb3, #ff8fab, #ff9ec4);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s infinite alternate;
+}
+
+/* Animasi gradasi background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.card h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #ffebcd;
+}
+
+.card p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+button {
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff165d;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Kata-kata romantis */
+#displaySection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+#displaySection h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Kotak tempat kata-kata muncul */
+.wordsBox {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animasi kata-kata */
+.wordsBox p {
+    font-size: 22px;
+    font-family: 'Great Vibes', cursive;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Animasi masuk kata */
+@keyframes wordFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
